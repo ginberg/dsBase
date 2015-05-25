@@ -79,6 +79,12 @@ subsetDS <- function(dt=NULL, complt=NULL, rs=NULL, cs=NULL, lg=NULL, th=NULL, v
         temp1[1:length(temp1)] <- NA
         output <- temp1
       }
+      for(z in 1:dim(D)[2]){
+        if(D == 'factor'){output <- factor(output, levels=levels(D))}
+        if(D == 'numeric'){output <- as.numeric(output)}
+        if(D == 'integer'){output <- as.integer(output)}
+        if(D == 'character'){output <- as.character(output)}
+      }
     }else{
       output <- subvect
     }
@@ -113,6 +119,13 @@ subsetDS <- function(dt=NULL, complt=NULL, rs=NULL, cs=NULL, lg=NULL, th=NULL, v
         subD <- subtable
         subD[] <- NA
         output <- subD
+      }
+      # make sure the columns are of the same class and levels (if factor) as in the input table
+      for(z in 1:dim(D)[2]){
+        if(class(D[,z]) == 'factor'){subD[,z] <- factor(subD[,z], levels=levels(D[,z]))}
+        if(class(D[,z]) == 'numeric'){subD[,z] <- as.numeric(subD[,z])}
+        if(class(D[,z]) == 'integer'){subD[,z] <- as.integer(subD[,z])}
+        if(class(D[,z]) == 'character'){subD[,z] <- as.character(subD[,z])}
       }
     }else{
       output <- subtable
