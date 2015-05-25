@@ -31,6 +31,9 @@ subsetByClassHelper1 <- function(xvect=NULL, xname=NULL, filter=NULL){
         subsets[[i]] <- temp1
         name.of.subD <- paste(vectname,".level_", categories[i], "_INVALID", sep="")
       }
+      # make sure the vector has the same levels as in the input vector
+      subsets[[i]] <- factor(subsets[[i]], levels=levels(xvect))
+      
       names.of.subsets <- append(names.of.subsets, name.of.subD)
     }
     names(subsets) <- names.of.subsets

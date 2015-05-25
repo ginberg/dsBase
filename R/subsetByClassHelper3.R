@@ -47,6 +47,15 @@ subsetByClassHelper3 <- function(df=NULL, indx1=NULL, filter=NULL){
           name.of.subD <- paste(varname,".level_", categories[j], "_INVALID",sep="")
         }
         colnames(subsets[[count]]) <- colnames(df)
+        
+        # make sure the columns are of the same class and levels (if factor) as in the input table
+        for(z in 1:dim(df)[2]){
+          if(class(df[,z]) == 'factor'){subsets[[count]][,z] <- factor(subsets[[count]][,z], levels=levels(df[,z]))}
+          if(class(df[,z]) == 'numeric'){subsets[[count]][,z] <- as.numeric(subsets[[count]][,z])}
+          if(class(df[,z]) == 'integer'){subsets[[count]][,z] <- as.integer(subsets[[count]][,z])}
+          if(class(df[,z]) == 'character'){subsets[[count]][,z] <- as.character(subsets[[count]][,z])}
+        }
+
         names.of.subsets <- append(names.of.subsets, name.of.subD)
       }
     }
