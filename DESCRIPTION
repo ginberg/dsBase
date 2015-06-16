@@ -28,7 +28,8 @@ AggregateMethods: length=base::length,
     isValidDS,
     ls=base::ls,
     numNaDS,
-    NROW=base::NROW
+    NROW=base::NROW,
+    meanSdGpDS
 AssignMethods: log=base::log,
     c=base::c,
     cDS,
