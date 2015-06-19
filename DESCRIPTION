@@ -54,4 +54,5 @@ AssignMethods: log=base::log,
     replaceNaDS,
     rep=base::rep,
     listNaDS,
+    rowShiftDS,
 Options: datashield.privacyLevel=5
