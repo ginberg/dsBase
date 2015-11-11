@@ -60,4 +60,8 @@ AssignMethods: log=base::log,
     setRowNamesDS,
     colnames=base::colnames,
     levels=base::levels,
+    split=base::split,
+    lapply=base::lapply,
+    tapply=base::tapply,
+    unlist=base::unlist,
 Options: datashield.privacyLevel=5
