@@ -1,3 +1,12 @@
+#'
+#' @title Computes 
+#' @description jhvjh
+#' @details sffgg
+#' @param obj
+#' @return a boolean
+#' @author fgg
+#' @export
+#'
 isValidNumericDS <- function(obj){
 
   unique.values.noNA <- unique(obj[complete.cases(obj)])
