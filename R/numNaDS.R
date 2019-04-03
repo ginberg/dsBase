@@ -1,4 +1,3 @@
-#' 
 #' @title Counts the number of missing values
 #' @description this function just counts the number of missing entries 
 #' in a vector. 

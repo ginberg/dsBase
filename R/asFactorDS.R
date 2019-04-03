@@ -1,4 +1,3 @@
-#' 
 #' @title Turns a numeric vector into a factor vector
 #' @description this function is similar to R function \code{as.factor} except for
 #' the fact that it does not allow for levels with one observation only.

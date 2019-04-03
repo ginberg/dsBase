@@ -1,4 +1,3 @@
-#' 
 #' @title Recodes the levels of a categorical variables
 #' @description The functions uses the input factor and generates a new factor 
 #' with new levels.

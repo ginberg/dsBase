@@ -1,4 +1,3 @@
-#' 
 #' @title Generates quantiles and mean information without maximum and minimum
 #' @description the probabilities 5%, 10%, 25%, 50%, 75%, 90%, 95% and the mean
 #' are used to compute the corresponding quantiles.
